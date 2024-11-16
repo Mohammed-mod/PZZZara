@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <button id="darkModeToggle">Dark Mode</button>
+    <button id="backToTop" class="back-to-top">↑</button>
+
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Restaurant Logo">
+            </div>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
+        <div class="theme-toggle-container" id="themeToggle">
+            <span class="theme-toggle-label">Dark Mode</span>
+            <div class="theme-toggle"></div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Fast Bites</h1>
+            <p>Delicious, quick, and affordable meals.</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+
+    </section>
+    <div id="notification" class="notification"></div>
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
+
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="item">
+                <img src="burger.jpg" alt="Burger">
+                <h3>Cheeseburger</h3>
+                <p>$5.99</p>
+            </div>
+            <div class="item">
+                <img src="pizza.png" alt="Pizza">
+                <h3>Pizza Slice</h3>
+                <p>$3.99</p>
+            </div>
+            <div class="item">
+                <img src="fries.png" alt="Fries">
+                <h3>French Fries</h3>
+                <p>$2.99</p>
+            </div>
+        </div>
+    </section>
+    <section id="menu" class="menu">
+        <div id="menu-items" class="menu-items"></div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="burger2.jpg" alt="Delicious Burger">
+            <img src="pizza.png" alt="Cheesy Pizza">
+            <img src="fries.png" alt="Crispy Fries">
+            <img src="fries.png" alt="Tasty Drinks">
+        </div>
+    </section>
+    <section id="order" class="order">
+        <h2>Place Your Order</h2>
+        <div id="menu-items" class="menu-items"></div>
+        <div class="cart">
+            <h3>Your Cart</h3>
+            <div id="cart-items"></div>
+            <p id="cart-total">Total: $0.00</p>
+            <button id="checkout">Checkout</button>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Fast Bites is my go-to place for quick and tasty meals. Highly recommend the cheeseburger!"</p>
+            <h4>- Sarah K.</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Amazing service and delicious food. I love their fries and pizza slice!"</p>
+            <h4>- John D.</h4>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What are your opening hours?</h3>
+            <p>We are open daily from 10 AM to 10 PM.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer delivery?</h3>
+            <p>Yes, we deliver within a 5-mile radius of the restaurant.</p>
+        </div>
+        <section id="reservation" class="reservation">
+            <h2>Reserve a Table</h2>
+            <form id="reservationForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+                
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+                
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+                
+                <button type="submit">Reserve Now</button>
+            </form>
+            <div id="reservationSuccess" class="success-message" style="display: none;">
+                Your reservation has been confirmed! We look forward to serving you.
+            </div>
+        </section>
+        
+    </section>
+    <section id="payment" class="payment">
+        <h2>Checkout</h2>
+        <form id="paymentForm">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9101 1121" required>
+            
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+            
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" required>
+            
+            <button type="submit">Pay Now</button>
+        </form>
+    </section>
+    
+    <section id="feedback" class="feedback">
+        <div class="container">
+            <h2>We Value Your Feedback</h2>
+            <p class="subtitle">Let us know how we’re doing and how we can improve!</p>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="feedbackName">Name</label>
+                    <input type="text" id="feedbackName" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Rate Us</label>
+                    <div class="rating">
+                        <span data-rating="1">★</span>
+                        <span data-rating="2">★</span>
+                        <span data-rating="3">★</span>
+                        <span data-rating="4">★</span>
+                        <span data-rating="5">★</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedbackMessage">Your Feedback</label>
+                    <textarea id="feedbackMessage" placeholder="Write your feedback here..." rows="4" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+            <div id="feedbackSuccess" class="success-message" style="display: none;">
+                Thank you for your feedback! 🌟
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Fast Bites, we are committed to serving you the freshest and tastiest fast food. Our team works tirelessly
+            to provide exceptional service and a menu that delights every palate.</p>
+    </section>
+    <section id="newsletter" class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="location" class="location">
+        <h2>Find Us</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345096477!2d-122.4194154846811!3d37.77492927975874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f5d36fb1%3A0x4a1ab12d4e81e1d4!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1697675696572!5m2!1sen!2sin"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fast Bites. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
